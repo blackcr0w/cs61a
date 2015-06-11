@@ -1,2 +1,2 @@
 # cs61a
-This is my work in self learning CS61C.
+This is my work in self learning CS61A.
