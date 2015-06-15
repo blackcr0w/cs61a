@@ -7,3 +7,11 @@ def sum_digits(n):
 	else:
 		allbutlast, last = split(n)
 		return sum_digits(allbutlast) + last
+
+# def sum_digits(n):
+# 	if n < 10:
+# 		return n
+# 	else:
+# 		allbutlast, last = split(n)
+# 		return sum_digits(allbutlast) + last
+
