@@ -39,6 +39,10 @@ a = [mul2(i) for i in testList]
 odds = [1, 3, 5, 7]
 evens = [print(x + 3) for x in odds]
 
+def devisiors(n):
+	return [x for x in range(1, n) if n % x == 0]
+
+    
 
 
 
