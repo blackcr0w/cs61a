@@ -1,3 +1,5 @@
+
+
 def counting(s, value):
 	total, index = 0, 0
 	while(index < len(s)):
@@ -23,3 +25,20 @@ def coutning3(s, value1, value2):
 		if e1 == value1 and e2 == value2:
 			total = total + 1
 	return total
+
+# this is the test funcition of list comprehension
+testList = [1,2,3,4]
+def mul2(x):
+  print (x * 2)
+a = [mul2(i) for i in testList]
+
+#print: a = [None, None, None, None]
+# 但是会把testlist中每个元素用mul2 作用一遍
+
+# list comprehension example 2:
+odds = [1, 3, 5, 7]
+evens = [print(x + 3) for x in odds]
+
+
+
+
