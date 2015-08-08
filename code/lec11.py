@@ -1,4 +1,4 @@
-
+import sys
 
 def counting(s, value):
 	total, index = 0, 0
@@ -42,7 +42,18 @@ evens = [print(x + 3) for x in odds]
 def devisiors(n):
 	return [x for x in range(1, n) if n % x == 0]
 
-    
+def width(area, length):
+	assert area % length == 0
+	# this is the useage of "assert" !!!!!!
+	return area // length 
+def perimeter(width, length):
+	return 2 * (width + length)
+
+def min_perimeter(area):
+	lengths = devisiors(area)
+	perimeters = [perimeter(width(area, l), l) for l in lengths]
+	return min(perimeters)
+
 
 
 
