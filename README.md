@@ -1,2 +1,3 @@
-# cs61a
-This is my work in self learning CS61A.
+# UC Berkeley, CS61A
+This is my work of CS61A self-paced learning.
+http://cs61a.org
