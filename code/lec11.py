@@ -1,4 +1,5 @@
 import sys
+import operator
 
 def counting(s, value):
 	total, index = 0, 0
@@ -54,6 +55,44 @@ def min_perimeter(area):
 	perimeters = [perimeter(width(area, l), l) for l in lengths]
 	return min(perimeters)
 
+def reduce(reduce_fn, s, initial):
+	reduced = initial
+	for x in s:
+		reduced = reduce_fn(reduced, x)
+	return reduced
 
+# using higher order function to find perfect number:
+def keep_if(filter_fn, s):
+        return [x for x in s if filter_fn(x)]
+# 这里是函数式编程，把filter_fn当成一个对象
 
+def devisior_of(n):
+	divides_n = lambda x: n % x == 0
+	return keep_if(divides_n, range(1, n))
+
+def sum_of_devisiors(n):
+	return reduce(add, devisior_of(n), 0)
+
+def perfect(n):
+	return sum_of_devisiors(n) == n
+
+# print (keep_if(perfect, range(1, 1000)))
+
+'''This is My own Module
+
+Date：2011-09-07
+Author：Chris Mao
+
+This is description information'''
+
+class TestClass:
+    '''This is TestClass' DocStrings'''
+    def func1():
+        '''this is func1's DocStrings'''
+        pass
+
+def func2():
+    '''this is func2'''
+    print ("this is func2")
+    print (func2.__doc__)
 
